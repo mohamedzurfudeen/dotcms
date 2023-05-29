@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Dot CMS Test</title>
+  <!-- Bootstrap core CSS -->
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+    <link href="dotcms.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A300%2C600"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Martel+Sans%3A300%2C400%2C700%2C800"/>
+  </head>
+  <body>
+  <main> 
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="assets/images/photo-plate.png" class="d-block mx-lg-auto img-fluid" alt="Plates" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 lh-1 mb-3">Your Food court at home</h1>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" class="btn btn-lg px-4 me-md-2"><span class="bigfont">Delivery</span> <span class="smallfont">Order in</span></button>
+            <button type="button" class="btn  btn-lg px-4"><span class="bigfont">Takeout</span> <span class="smallfont">Grab and go</span></button>
+          </div>    
+        </div>
+      </div>
+      <div class="row delivery">
+        <div class="col-lg-3 col-md-8 item">
+          <img src="assets/images/clock.png" alt="delivery" width="48px">
+          <span>delivery in all paris in less than 30 minutes</span>
+        </div>
+        <div class="col-lg-3 col-md-8 item">
+          <img src="assets/images/scooter.png" alt="Free delivery" width="48px">
+          <span>Free delivery from 29 euros</span>
+        </div>
+        <div class="col-lg-3 col-md-8 item">
+          <img src="assets/images/eiffel.png" alt="fresh and French products" width="48px">
+          <span>Only fresh and French products</span>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center my-3 caro">
+      <div class="row">
+        <div class="col-md-10 extra">
+          <h2 class="display-5 lh-1 mb-3 text-start">Restarunts</h2>
+        </div>
+        <div class="col-md-2">
+          <div class="showall">
+            <a>See all</a>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-auto my-auto justify-content-center">
+        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="assets/images/burger.png" class="img-fluid">
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+             <div class="carousel-item">
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="assets/images/Il-Pasti.png" class="img-fluid">
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="assets/images/believe.png" class="img-fluid">
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="assets/images/viatnamese.png" class="img-fluid">
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>    
+    </div>
+  </main>
+  <script>
+    let items = document.querySelectorAll('.carousel .carousel-item')
+  
+  items.forEach((el) => {
+    const minPerSlide = 4
+    let next = el.nextElementSibling
+    for (var i=1; i<minPerSlide; i++) {
+      if (!next) {
+          next = items[0]
+      }
+      let cloneChild = next.cloneNode(true)
+      el.appendChild(cloneChild.children[0])
+      next = next.nextElementSibling
+  }
+  })
+  
+  </script>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
